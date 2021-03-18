@@ -42,6 +42,10 @@ def hangman():
                 for i in range(len(guess)):
                     if movie[i] == letter:
                         guess[i] = letter
+                        
+            else:
+                print(f"'{letter}' is not in the movie name")
+                lives -= 1
 
         elif letter in used_letters:  # minus 1 life if wrong
             print(f"You have already used {letter}.")
